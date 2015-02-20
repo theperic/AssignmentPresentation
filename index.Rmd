@@ -1,0 +1,33 @@
+---
+title       : Height Predition App
+subtitle    : 
+author      : Eric Larsen
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Using the Application
+
+This is a basic application to predict a person's height based on the average of their parents height and their gender.  It uses a simple linear model based on te Galton data set in R.
+
+1. Use the Slider to select your father's height.
+2. Use the Slider to select your mother's height.
+3. Select your gender.
+
+--- .class #id 
+
+## Technical information
+
+The calculation in the app is quite simple.  I fit a linear model to the Galton data set:
+
+lm(galton$child ~ galton$parent)
+
+I averaged the input heights of the father and mother, then applied the slope and y intercept from the linear model.
+
+I assumed that men are 5% taller than women, so if the gender selected was female, I reduced the estimate by 5%.
+
