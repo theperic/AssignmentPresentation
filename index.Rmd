@@ -31,3 +31,10 @@ I averaged the input heights of the father and mother, then applied the slope an
 
 I assumed that men are 5% taller than women, so if the gender selected was female, I reduced the estimate by 5%.
 
+---
+
+## Environment Information
+This application and document were built with:
+```{r}
+print(sessionInfo(), locale = FALSE)
+```
