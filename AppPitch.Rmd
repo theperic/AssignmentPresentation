@@ -19,18 +19,14 @@ This is a simple application to predict a person's height based on the average o
 2. Use the Slider to select your mother's height.
 3. Select your gender.
 
----
-
-## The Application
-
 The interface is clean and simple, the output is easy to understand!
 
 <div style='text-align: center;'>
-    <img height='560' src='appimage.png' />
+    <img height='400' src='appimage.png' />
 </div>
 
 
---- 
+---
 
 ## The Science!
 
