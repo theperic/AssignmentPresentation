@@ -46,7 +46,7 @@
     <h2>Using the Application</h2>
   </hgroup>
   <article data-timings="">
-    <p>This is a basic application to predict a person&#39;s height based on the average of their parents height and their gender.  It uses a simple linear model based on te Galton data set in R.</p>
+    <p>This is a simple application to predict a person&#39;s height based on the average of their parents height and their gender. </p>
 
 <ol>
 <li>Use the Slider to select your father&#39;s height.</li>
@@ -58,12 +58,27 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="class" id="id" style="background:;">
+<slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>The Application</h2>
   </hgroup>
   <article data-timings="">
-    <p>The calculation in the app is quite simple.  I fit a linear model to the Galton data set:</p>
+    <p>The interface is clean and simple, the output is easy to understand!</p>
+
+<div style='text-align: center;'>
+    <img height='560' src='appimage.png' />
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>The Science!</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The App uses a simple linear model based on the Galton data set in R. The calculation in the app is quite simple.  I fit a linear model to the Galton data set:</p>
 
 <p>lm(galton$child ~ galton$parent)</p>
 
@@ -75,42 +90,25 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-3" style="background:;">
-  <hgroup>
-    <h2>Slide 3</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r"># library(UsingR)
-# data(galton)
-# plot(galton$parent, galton$child, pch=19, col=”blue”)
-# lm1 &lt;- lm(galton$child ~ galton$parent)
-# lines(galton$parent, lm1$fitted, col=”red”, lwd=3)
-</code></pre>
-
-<p>plot(galton$parent, galton$child, pch=19, col=”blue”)</p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Slide 4</h2>
+    <h2>Proof of the Science!</h2>
   </hgroup>
   <article data-timings="">
-    
+    <p>The Chart below illustrates the correlation between the height of the parent and the child:</p>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-5" style="background:;">
   <hgroup>
-    <h2>Slide 5</h2>
+    <h2>Environment Information</h2>
   </hgroup>
   <article data-timings="">
-    <h2>Environment Information</h2>
-
-<p>This application and document were built with:</p>
+    <p>This application and document were built with:</p>
 
 <pre><code class="r">print(sessionInfo(), locale = FALSE)
 </code></pre>
@@ -123,16 +121,20 @@
 ## [8] methods   base     
 ## 
 ## other attached packages:
-## [1] UsingR_2.0-4    Hmisc_3.14-6    Formula_1.2-0   survival_2.37-7
-## [5] lattice_0.20-29 HistData_0.7-5  MASS_7.3-37    
+## [1] rCharts_0.4.5   ggplot2_1.0.0   UsingR_2.0-4    Hmisc_3.14-6   
+## [5] Formula_1.2-0   survival_2.37-7 lattice_0.20-29 HistData_0.7-5 
+## [9] MASS_7.3-37    
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] acepack_1.3-3.3     cluster_2.0.1       codetools_0.2-10   
+##  [1] acepack_1.3-3.3     cluster_2.0.1       colorspace_1.2-4   
 ##  [4] digest_0.6.8        evaluate_0.5.5      foreign_0.8-62     
-##  [7] formatR_1.0         knitr_1.9           latticeExtra_0.6-26
-## [10] markdown_0.7.4      nnet_7.3-8          RColorBrewer_1.1-2 
-## [13] rpart_4.1-8         slidify_0.4.5       stringr_0.6.2      
-## [16] tools_3.1.2         whisker_0.3-2       yaml_2.1.13
+##  [7] formatR_1.0         gtable_0.1.2        knitr_1.9          
+## [10] latticeExtra_0.6-26 markdown_0.7.4      munsell_0.4.2      
+## [13] nnet_7.3-8          plyr_1.8.1          proto_0.3-10       
+## [16] RColorBrewer_1.1-2  Rcpp_0.11.4         reshape2_1.4.1     
+## [19] RJSONIO_1.3-0       rpart_4.1-8         scales_0.2.4       
+## [22] slidify_0.4.5       stringr_0.6.2       tools_3.1.2        
+## [25] whisker_0.3-2       yaml_2.1.13
 </code></pre>
 
   </article>
@@ -151,25 +153,25 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='The Application'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Slide 3'>
+        data-slide=3 title='The Science!'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Slide 4'>
+        data-slide=4 title='Proof of the Science!'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Slide 5'>
+        data-slide=5 title='Environment Information'>
          5
       </a>
     </li>
