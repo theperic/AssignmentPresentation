@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Height Predition App</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Height Predition App">
+  <meta name="author" content="Eric Larsen">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Height Predition App</h1>
+    <h2></h2>
+    <p>Eric Larsen<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Using the Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This is a basic application to predict a person&#39;s height based on the average of their parents height and their gender.  It uses a simple linear model based on te Galton data set in R.</p>
+
+<ol>
+<li>Use the Slider to select your father&#39;s height.</li>
+<li>Use the Slider to select your mother&#39;s height.</li>
+<li>Select your gender.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Slide 2</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The calculation in the app is quite simple.  I fit a linear model to the Galton data set:</p>
+
+<p>lm(galton$child ~ galton$parent)</p>
+
+<p>I averaged the input heights of the father and mother, then applied the slope and y intercept from the linear model.</p>
+
+<p>I assumed that men are 5% taller than women, so if the gender selected was female, I reduced the estimate by 5%.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Slide 3</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r"># library(UsingR)
+# data(galton)
+# plot(galton$parent, galton$child, pch=19, col=”blue”)
+# lm1 &lt;- lm(galton$child ~ galton$parent)
+# lines(galton$parent, lm1$fitted, col=”red”, lwd=3)
+</code></pre>
+
+<p>plot(galton$parent, galton$child, pch=19, col=”blue”)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Slide 4</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Slide 5</h2>
+  </hgroup>
+  <article data-timings="">
+    <h2>Environment Information</h2>
+
+<p>This application and document were built with:</p>
+
+<pre><code class="r">print(sessionInfo(), locale = FALSE)
+</code></pre>
+
+<pre><code>## R version 3.1.2 (2014-10-31)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## 
+## attached base packages:
+## [1] grid      splines   stats     graphics  grDevices utils     datasets 
+## [8] methods   base     
+## 
+## other attached packages:
+## [1] UsingR_2.0-4    Hmisc_3.14-6    Formula_1.2-0   survival_2.37-7
+## [5] lattice_0.20-29 HistData_0.7-5  MASS_7.3-37    
+## 
+## loaded via a namespace (and not attached):
+##  [1] acepack_1.3-3.3     cluster_2.0.1       codetools_0.2-10   
+##  [4] digest_0.6.8        evaluate_0.5.5      foreign_0.8-62     
+##  [7] formatR_1.0         knitr_1.9           latticeExtra_0.6-26
+## [10] markdown_0.7.4      nnet_7.3-8          RColorBrewer_1.1-2 
+## [13] rpart_4.1-8         slidify_0.4.5       stringr_0.6.2      
+## [16] tools_3.1.2         whisker_0.3-2       yaml_2.1.13
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Using the Application'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Slide 2'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Slide 3'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Slide 4'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Slide 5'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
